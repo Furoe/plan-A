@@ -125,3 +125,12 @@ var myFilter = function(item){
 };
 [1, 2, 3, 4, 5].filter(myFilter, obj);
 ```
+some()和every()
+返回一个布尔值，判断数组成员是否满足某个条件
+some：只要一个成员的返回值是true，则整个some返回的是true。
+every：只有每个成员的返回值是true，才返回true。
+reduce()和reduceRight()
+依次处理数组成员，累计成一个值。
+如果要对累计变量指定初值，可以把它放在reduce和reduceRight的第二个参数处。
+indexOf()和lastIndexOf()
+返回给定元素在数组中第一次出现的位置，如果没有返回-1。

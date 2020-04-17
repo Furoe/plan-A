@@ -18,5 +18,5 @@ JavaScript存在一个顶层对象，它提供全局环境（即全局作用域�
 	   typeof global === 'object')
 	? global 
 	: this)
-)
+);
 ```

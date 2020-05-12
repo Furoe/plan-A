@@ -29,3 +29,15 @@ WeakSet中成员都是弱引用，垃圾回收机制不考虑WeakSet对该对象
 let obj = {'a': 1, 'b': 2};
 let map = new Map(Object.entries(obj));
 ```
+##### Map转JSON
+键名都是字符串，转为对象JSON
+map=>obj=>JSON
+键名有非字符串，转为数组JSON
+```JavaScript
+JSON.stringify([...map])
+```
+##### JSON转Map
+键名全为字符串
+objToMap(JSON.parse(str))
+键名有非字符串
+new Map(JSON.parse(str))

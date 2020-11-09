@@ -32,6 +32,7 @@
 - [ ] 熟练掌握React桶
 - [ ] 了解下React Native
 - [ ] 掌握Nodejs相关经验(egg.js)
+- [ ] 后台相关掌握一些
 #### 学习规划
 - [ ] 系统全年的掌握前端相关知识(浏览器、网络、安全、HTML、CSS、CSS3、ES6+)
 - [ ] leetcode每日一题

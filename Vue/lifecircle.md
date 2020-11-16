@@ -27,9 +27,9 @@ callHook(vm, 'created')
 if(opts.props) initProps(vm, opts.props)  //初始化props
 if(opts.methods) initMethods(vm, opts.methods)  //初始化methods
 if(opts.data) {
-    initData(vm.data);
+    initData(vm, opts.data);
 }else{
-    observe(vm.data = {}, true, /* as root data*/);  //初始化data
+    observe(vm._data = {}, true /* as root data*/);  //初始化data
 }
 if(opts.computed) initComputed(vm, opts.computed);  //初始化computed
 ```

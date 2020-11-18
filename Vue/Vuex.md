@@ -72,5 +72,26 @@ export default {
 ```
 
 #### Actions
-#### Mutations
+异步改变状态需要使用`action`，`action`不直接更改状态，而是发起`mutation`
+#### Mutation
+是改变`store`中状态的执行者，只能是同步操作。
 #### Modules 
+对于大型应用，可以将仓库分割成子模块。
+### 通过几个问题理解vuex的原理
+#### vuex的store是如何注入到组件中的？
+`Vue.use(Vuex)`会调用`install`方法，装载`vuex`。  
+然后看看`install`的执行逻辑。  
+```JavaScript
+Vue.mixin({
+    beforeCreate(): {
+        if(this.$options && this.$options.store){
+            this.$store = this.$options.store
+        }else{
+            this.$store = this.$parent && this.$parent.$store
+        }
+    } 
+})
+```
+综上可知，vuex的注入是通过minxin的方法，在vue构建实例时通过钩子函数`beforeCreate`注入的。
+#### Getters的实现
+`vuex`和`vue`一样是响应式的，`state`是通过放入`data`中实现，而`getters`是通过放入`computed`中做到响应式的。  

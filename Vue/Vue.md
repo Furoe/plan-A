@@ -46,3 +46,13 @@ reverse()
 <!-- 只有event.target是当前元素自身时触发处理函数 -->
 <a v-on:click.self="doThis"></a>
 ```
+### 表单修饰符
+#### .lazy
+默认情况下，`v-model`在每次`input`事件触发后将输入框的值与数据进行同步，添加`lazy`修饰符后，只会在触发`change`事件时会同步。  
+```HTML
+<input v-bind.lazy="msg" />
+```
+#### .number
+自动将输入内容转换成数值类型。
+#### .trim
+自动过滤首尾空白字符。

@@ -56,7 +56,7 @@ reverse()
 自动将输入内容转换成数值类型。
 #### .trim
 自动过滤首尾空白字符。
-### props
+### prop
 #### 传入一个对象的所有`property`
 如果想要将一个对象的所有`property`都作为`prop`传入，可以使用不带参数的`v-bind`。
 ```JavaScript

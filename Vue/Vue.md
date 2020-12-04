@@ -62,3 +62,25 @@ reverse()
 ```JavaScript
 <blog-post v-bind="obj"></blog-post>
 ```
+#### 禁用Attribute继承
+如果你不希望组件的根组件继承`attribute`，你可以在组件的选项中设置`inheritAttrs: false`。
+```JavaScript
+Vue.component('my-component', {
+    inheritAttrs: false
+})
+```
+### 自定义事件
+#### 将原生事件绑定到组件
+#### .sync修饰符
+`prop`的双向绑定，可以使用`.sync`修饰符来使双向绑定更加简洁，但是不能搭配表达式使用。
+```
+<text-document 
+    v-bind:title="doc.title" 
+    v-on:update:title="doc.title=$event">
+</text-document>
+
+<text-document v-bind:title.sync="doc.title">
+</text-document>
+```
+### 插槽
+

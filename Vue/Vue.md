@@ -83,4 +83,5 @@ Vue.component('my-component', {
 </text-document>
 ```
 ### 插槽
+v-slot
 

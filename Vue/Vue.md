@@ -84,4 +84,13 @@ Vue.component('my-component', {
 ```
 ### 插槽
 vue 2.6 v-slot
+#### 后备内容
+有时为一个插槽设置默认的内容很有必要，它只会在没有提供的时候被渲染。
+```JavaScript
+<button>
+    <slot>submit</slot>
+</button>
 
+<submit-button></submit-button> //渲染submit
+<submit-button>save</submit-button>  //渲染save
+```

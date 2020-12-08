@@ -94,3 +94,4 @@ vue 2.6 v-slot
 <submit-button></submit-button> //渲染submit
 <submit-button>save</submit-button>  //渲染save
 ```
+### 异步组件

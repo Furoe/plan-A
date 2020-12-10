@@ -95,3 +95,4 @@ vue 2.6 v-slot
 <submit-button>save</submit-button>  //渲染save
 ```
 ### 异步组件
+### 循环引用

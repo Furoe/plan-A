@@ -109,3 +109,5 @@ provide: function(){
 //在后代中都可以通过inject获取
 inject: ['getMap']
 ```
+### 循环引用
+

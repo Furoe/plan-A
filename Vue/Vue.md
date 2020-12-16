@@ -94,4 +94,18 @@ vue 2.6 v-slot
 <submit-button></submit-button> //渲染submit
 <submit-button>save</submit-button>  //渲染save
 ```
+### 动态组件
 ### 异步组件
+#### refs
+`$refs`只会在组件渲染完时生效，并且他们不是响应式的。
+#### 依赖注入
+`provide`选项允许执行想要提供给后代组件的数据/方法。
+```JavaScript
+provide: function(){
+    return {
+        getMap: this.getMap
+    }
+}
+//在后代中都可以通过inject获取
+inject: ['getMap']
+```

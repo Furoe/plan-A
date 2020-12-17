@@ -99,7 +99,8 @@ vue 2.6 v-slot
 #### refs
 `$refs`只会在组件渲染完时生效，并且他们不是响应式的。
 #### 依赖注入
-`provide`选项允许执行想要提供给后代组件的数据/方法。
+`provide`选项允许执行想要提供给后代组件的数据/方法。  
+负面效果就是造成了强耦合。
 ```JavaScript
 provide: function(){
     return {
@@ -109,5 +110,21 @@ provide: function(){
 //在后代中都可以通过inject获取
 inject: ['getMap']
 ```
+### 程序化的事件侦听器
+挂载第三方库的时候，需要
+```JavaScript
+mounted: function (){
+    this.picker = new Pickaday({
+        field: this.$refs.input,
+        format: 'YYYY-DD-MM'
+    })
+
+    this.$once('hook:beforeDestroyed', function(){
+        picker.destroy()
+    })
+}
+```
 ### 循环引用
+### 强制更新
+`$forceUpdate`可以用来强制更新，但是`Vue`本身就是响应式，应该避免这些用法，多考虑是不是自己用错了。 
 

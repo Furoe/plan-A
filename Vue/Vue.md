@@ -125,13 +125,7 @@ mounted: function (){
 }
 ```
 ### 循环引用
-did
-light
 ### 强制更新
 `$forceUpdate`可以用来强制更新，但是`Vue`本身就是响应式，应该避免这些用法，多考虑是不是自己用错了。 
 ### 混入
 #### 全局混入
-light
-light
-light
-light

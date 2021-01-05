@@ -6,7 +6,7 @@ sass使用缩进来表示关系，文件后缀是.sass。
 变量以$开头，用来存储重复使用的数据，包括宽度、高度和颜色等等。 
 如果变量需要嵌在字符串中，则需要写在`#{}`中。  
 但是如果变量是数字要避免`#{$value}px`这种写法，尽量使用`$value * 1px`。
-```
+```SCSS
 $side: left;
 .rounded {
 	border-#{$side}-radius: 5px;
@@ -14,7 +14,7 @@ $side: left;
 ```  
 ###### 全局变量与局部变量
 定义在顶层的是全局变量，定义在块中的是局部变量，局部变量可以跟全局变量重名。  
-```
+```SCSS
 $global-variable: global value;
 .content {
 	$local-variable: local value;
@@ -23,7 +23,7 @@ $global-variable: global value;
 }
 ```  
 如果需要在局部环境声明一个全局变量，使用!global标志。
-```
+```SCSS
 $variable: first global value;
 .content {
 	$variable: second global value !global;
@@ -48,7 +48,7 @@ nav ul{
 }
 ```
 在嵌套的代码块中，可以引用父级元素。
-```
+```SCSS
 a {
 	&:hover {
 		color: #ffb3ff;
@@ -58,7 +58,7 @@ a {
 ##### 模块
 不需要将所有sass写在同一个文件中，可以根据功能或者意义分割成模块。
 然后使用`@use`引入模块。当前只有Dart Sass支持`@use`，其他使用`@import`。
-```
+```SCSS
 //_base.scss
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
@@ -78,7 +78,7 @@ body{
 ##### 混入
 在考虑浏览器兼容性的时候，有很多属性需要重复写，这时候使用混入，用混入
 的方式写兼容性语句，只需要考虑样式的值，不需要重复的书写。
-```
+```SCSS
 @mixin transfrom($property) {
 	-webkit-transform: $property;
 	-moz-transform: $property;
@@ -89,7 +89,7 @@ body{
 ```
 ##### 继承
 当一个基本样式不变的组件有多种样式，使用继承的方式可以减少重复代码。
-```
+```SCSS
 %message-shared {
 	border: 1px solid #ccc;
 	padding: 10px;
@@ -117,7 +117,7 @@ body{
 ```
 ##### 操作符
 sass支持一些标准的数学运算符，比如+、-、*、/和%。  
-```
+```SCSS
 .container {
 	width: 100%;
 }
@@ -145,14 +145,14 @@ aside[role='complementary'] {
 ##### 高级用法
 ###### 条件语句
 `@if`和`@else`
-```
+```SCSS
 p {
 	@if 1 + 1 === 2 { border: 1px solid; }
 	@else { border: 2px dotted; }
 }
 ```
 ###### 循环语句
-```
+```SCSS
 //for循环
 @for $i from 1 to 10 {
 	.border-#{$i} {
@@ -177,7 +177,7 @@ $i: 6;
 }
 ```
 ###### 自定义函数
-```
+```SCSS
 @function double($n) {
 	@return $n * 2;
 }
@@ -188,7 +188,7 @@ $i: 6;
 ```
 ##### 内置函数
 ###### 颜色函数
-```
+```SCSS
 lighten(#cc3, 10%)  //#d6d65c
 darken(#cc3, 10%)  //#a3a329
 grayscale(#cc3)  //#808080

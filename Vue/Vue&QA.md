@@ -15,7 +15,7 @@
 #### 6、`Vue`里面的`router-link`在电脑上有用，在安卓上没反应怎么解决
 `Vue`路由在安卓上有问题，`babel`问题，安装`babel-polyfill`插件解决。
 #### 7、`Vue2`中注册在`router-link`上的事件无效
-使用`@click.native`，因为`router-link`会组织`click`事件，`.native`直接监听原生事件。
+使用`@click.native`，因为`router-link`会阻止`click`事件，`.native`直接监听原生事件。
 #### 8、`RouterLink`在IE和Firefox中不起作用
 方法一：只使用`a`标签，不使用`button`。
 方法二：使用`button`标签，用`Router.navigate`跳转。

@@ -19,3 +19,9 @@
 #### 8、`RouterLink`在IE和Firefox中不起作用
 方法一：只使用`a`标签，不使用`button`。
 方法二：使用`button`标签，用`Router.navigate`跳转。
+#### 9、`active-class`是哪个组件的属性
+`vue-router`模块的`router-link`组件，`children`数组定义子路由。
+#### 10、`vue-router`有哪几种导航钩子
+1、全局导航守卫`router.beforeEach(to, from , next)`，跳转前进行判断拦截。
+2、组件内的守卫
+3、单独路由独享守卫

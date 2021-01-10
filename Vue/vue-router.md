@@ -94,3 +94,37 @@ beforeRouteLeave(to, from, next){
 10、调用全局`afterEach`
 11、触发DOM更新
 12、调用`beforeRouteEnter`中传入`next`的回调函数，创建好的组件会作为回调函数的参数传入
+### 过渡动效
+#### 单个路由的过渡
+```JavaScript
+cosnt Foo = {
+  template: `
+    <transition name="slide">
+      <div></div>
+    </transition>
+  `
+}
+
+const Bar = {
+  template: `
+    <transition name="fade">
+      <div></div>
+    </transition>
+  `
+}
+```
+#### 基于路由的过渡
+基于当前路由和目标路由，动态设置效果。
+```JavaScript
+<transition :name="transitionName">
+  <router-view></router-view>
+</transition>
+
+watch: {
+  '$route'(to, from){
+    const toDepth = to.path.split('/').length;
+    const fromDpth = from.path.split('/').length;
+    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+  }
+}
+```

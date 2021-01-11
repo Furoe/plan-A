@@ -128,3 +128,28 @@ watch: {
   }
 }
 ```
+### 滚动行为
+```JavaScript
+const router = new VueRouter({
+  routes: [...],
+  scrollBehavior(ro, from, savedPosition){
+    if(savedPosition){
+      return savedPosition
+    }else{
+      return {x: 0, y: 0}
+    }
+  }
+})
+```
+#### 异步滚动
+> 2.8.0+  
+
+```JavaScript
+scrollBehavior(to, from, savedPosition){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve ({x: 0, y: 0})
+    }, 500)
+  })
+}
+```

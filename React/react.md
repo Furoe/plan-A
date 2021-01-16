@@ -1,0 +1,8 @@
+### React生命周期函数
+componentWillMount
+componentDidMount
+shouldComponentUpdate
+componentWillUpdate
+componentDidUpdate
+componentWillReceiveProps
+componentWillUnmount

@@ -66,3 +66,29 @@ unusable = null;
 let u: undefined = undefined;
 let n: null = null;
 ```
+### Never
+抛出异常或者永不为真。`never`类型是任何类型的子类，可以赋值给任意类型。但是不是任何类型的子类，甚至`any`都不能赋值给`never`。
+```typescript
+function error(message: string): never {
+  throw new Error(message)
+}
+
+function fail() {
+  return error("Something failed")
+}
+
+function infiniteLoop(): never {
+  while(true){}
+}
+```
+### Object
+不包含原始类型。(not include number、string、boolean、bigint、symbol、null、undefined)
+### type assertions（类型断言）
+两种格式
+```typescript
+let someValue: unknown = "this is a string";
+let strLen: number = (someValue as string).length;
+
+let someValue: unknown = "this is a string";
+let strLen: number = (<string>someValue).length;
+```

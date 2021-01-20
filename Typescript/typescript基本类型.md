@@ -61,7 +61,7 @@ let unusable: void = undefined;
 unusable = null;
 ```
 ### null和undefined
-在`typescript`中，`null`和`undefined`有它们自己的类型。同时，`null`和`undefined`默认是其它类型的子类。
+在`typescript`中，`null`和`undefined`有它们自己的类型。同时，`null`和`undefined`默认是其它类型的子类，也就是说它们可以赋给其它类型。但是在`strictNullChecks`模式下，它们仅能赋给`unknown`和`any`。
 ```typescript
 let u: undefined = undefined;
 let n: null = null;

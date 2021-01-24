@@ -36,3 +36,4 @@ let mySquare = createSquare({color: "black"});
 ```
 #
 #
+#

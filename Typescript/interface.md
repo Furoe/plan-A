@@ -34,3 +34,30 @@ function createSquare(config: SquareConfig): {color: string, area: number} {
 
 let mySquare = createSquare({color: "black"});
 ```
+#### Readonly properties
+某些属性只能在创建时进行修改。
+```typescript
+interface Point {
+  readonly x: number,
+  readonly y: number
+}
+
+let p1: Point = { x: 10, y: 20 };
+p1.x = 5; // error
+```
+##### ReadonlyArray
+```typescript
+let a: number[] = [1, 2, 3, 4];
+let ro: ReadonlyArray<number> = a;
+
+ro[0] = 12; // error
+ro.push(5); // error
+ro.length = 100; /// error
+a = ro; // error
+```
+只读数组类型不能修改，也不能直接赋值给一般的数组，但是可以使用类型断言。
+```typescript
+let a: number[] = [1, 2, 3, 4];
+let ro: ReadonlyArray<number> = a;
+a = ro as number[];
+```

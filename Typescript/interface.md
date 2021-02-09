@@ -38,8 +38,8 @@ let mySquare = createSquare({color: "black"});
 某些属性只能在创建时进行修改。
 ```typescript
 interface Point {
-  readonly x: number,
-  readonly y: number
+  readonly x: number;
+  readonly y: number;
 }
 
 let p1: Point = { x: 10, y: 20 };
@@ -60,4 +60,10 @@ a = ro; // error
 let a: number[] = [1, 2, 3, 4];
 let ro: ReadonlyArray<number> = a;
 a = ro as number[];
+```
+#### Function Types
+```typescript
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
 ```

@@ -66,4 +66,34 @@ a = ro as number[];
 interface SearchFunc {
   (source: string, subString: string): boolean;
 }
+
+let mySearch: SearchFunc = function(src: string, sub: string): boolean {
+  let result = src.search(sub);
+  return result > -1;
+}
+```
+#### Indexable Types
+```typescript
+interface stringArray {
+  [index: number]: string;
+}
+
+let myArray: stringArray;
+myArray = ["Bob", "Fred"];
+let myStr: string = myArray[0];
+```
+#### Class Types
+```typescript
+interface ClockInterface {
+  currentTime: Date;
+  setTime(d: Date): void;
+}
+
+class Clock implements ClockInterface {
+  currentTime: Date = new Date();
+  setTime(d: Date) {
+    this.currentTime = d;
+  }
+  constructor(h: number, m: number) {}
+}
 ```

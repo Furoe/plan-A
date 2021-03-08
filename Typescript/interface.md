@@ -96,4 +96,3 @@ class Clock implements ClockInterface {
   }
   constructor(h: number, m: number) {}
 }
-```

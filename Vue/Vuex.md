@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-19 10:27:44
+ * @LastEditTime: 2021-03-31 15:40:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \plan-A\Vue\Vuex.md
+-->
 ### Vuex
 vuex的核心就是仓库（store），包含着应用中大部分的状态(state)。  
 但是vuex和全局对象不同的是：  
@@ -92,6 +100,6 @@ Vue.mixin({
     } 
 })
 ```
-综上可知，vuex的注入是通过minxin的方法，在vue构建实例时通过钩子函数`beforeCreate`注入的。
+综上可知，vuex的注入是通过mixin的方法，在vue构建实例时通过钩子函数`beforeCreate`注入的。
 #### Getters的实现
 `vuex`和`vue`一样是响应式的，`state`是通过放入`data`中实现，而`getters`是通过放入`computed`中做到响应式的。  

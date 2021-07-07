@@ -30,3 +30,26 @@ radial-gradient(tan 30%, tansparent 0);
 background-size: 30px 30px;
 background-position: 0 0, 15px 15px;
 ```
+#### 棋盘
+```scss
+@mixin chessBoard($base, $accent, $size){
+  background: $base;
+  background-image: linear-gradient(45deg, $base 25%, transparent 0, transparent 75%, $base 0),
+                    linear-gradient(45deg, $base 25%, transparent 0, transparent 75%, $base 0);
+  background-position: 0, 0, $size, $size;
+  background-size: 2*$size 2*$size;
+}
+@include chessBoard(#eee, #bbb, 15px)
+```
+### 角向径变
+```scss
+// 色轮
+.linear-circle{
+  background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
+}
+
+.chessBoard{
+  background: repeating-conic-gradient(#bbb 0, #bbb 25%, #eee 0, #eee 50%);
+  background-size: 30px 30px;
+}
+```

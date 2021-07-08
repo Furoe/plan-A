@@ -54,3 +54,34 @@ img:hover{
   transform-origin: bottom;
 }
 ```
+#### 折角
+```scss
+.inflection-angle{
+  background: #58a;
+  background: linear-gradient(to right bottom, transparent 50%, rgba(0, 0, 0, .4) 0) no-repeat 100% 0 / 2em 2em,
+              linear-gradient(-135deg, transparent 1.5em, rgba(0, 0, 0, .4));
+}
+
+@mixin folded-corner($background, $size, $angle: 30deg){
+  position: relative;
+  background: $background;
+  background: linear-gradient($angle - 180deg, transparent $size, #background 0);
+  border-radius: .5em;
+  $y: $size / sin($angle);
+  $x: $size / cos($angle);
+  &::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, .4) 100% 0 no-repeat);
+    width: $x;
+    height: $y;
+    transform: translateY($y - $x) rotate(2*$angle - 90deg);
+    transform-origin: bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow: -.2em .2em .3em -.1em rgba(0, 0, 0, .2);
+  }
+}
+.node{
+  @include folded-corner(#58a, 2em, 40deg);
+}
+```

@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-04 19:21:44
+ * @LastEditTime: 2021-04-09 16:15:06
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \plan-A\Vue\Vue&QA.md
+-->
 #### 1、简述`computed`和`watch`的使用场景
 当一个元素受多个元素影响，使用`computed`，例子：购物车。
 当一个元素影响多个元素，使用`watch`，例子：数据搜索。
@@ -25,3 +33,8 @@
 1、全局导航守卫`router.beforeEach(to, from , next)`，跳转前进行判断拦截。
 2、组件内的守卫
 3、单独路由独享守卫
+
+#### 11、在vue中，watch和created哪个先执行
+根据生命周期判断，init reactivity在beforeCreate之后，created之前。
+如果watch添加了immediate:true，那么watch在created之前执行，反之在created之后，在
+mounted之后触发data changes执行。

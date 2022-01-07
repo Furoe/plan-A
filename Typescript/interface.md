@@ -1,5 +1,5 @@
 ### interface
-接口时一种具有结构的子类。
+接口是一种具有结构的子类。
 ```typescript
 interface LabeledValue {
   label: string;

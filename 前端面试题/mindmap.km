@@ -1,0 +1,35 @@
+{
+    "root": {
+        "data": {
+            "id": "cjevg3xl0ao0",
+            "created": 1650438012656,
+            "text": "前端面试"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cjevga9lig00",
+                    "created": 1650438026443,
+                    "text": "JS基础",
+                    "layout_mind_offset": {
+                        "x": -84,
+                        "y": -185
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cjevgfusqgo0",
+                            "created": 1650438038609,
+                            "text": "闭包"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

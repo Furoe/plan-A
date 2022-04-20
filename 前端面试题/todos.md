@@ -1,0 +1,19 @@
+[ts面经](https://juejin.cn/post/7087435520993099783)
+js基础
+axios配置
+webpack
+vue2
+vue-router
+vuex
+vue3
+react
+react-router
+redux
+http
+algorithm
+css布局
+scss
+前端性能优化、打包部署
+nodejs
+plugin loader
+设计模式

@@ -1,0 +1,15 @@
+- [ ] 算法
+- [ ] Vue2 + vuex + vue-router 整体性学习
+- [ ] vue3 + vuex/pinia + vue-router 整体性学习
+- [ ] typescript
+- [ ] 微前端
+- [ ] webpack vite配置以及打包相关
+- [ ] 低代码思路回顾
+- [ ] 网络
+- [ ] html、css、js
+- [ ] scss
+- [ ] react
+- [ ] vitest、jestest、jsdom
+- [ ] git 
+- [ ] vue2、vue3源码
+- [ ] BOM、DOM

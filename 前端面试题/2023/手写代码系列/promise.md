@@ -138,3 +138,26 @@ myPromise.race = function(arr){
 ```
 #### 应用
 ##### 异步并发数控制
+```js
+class schedule{
+  constructor(maxNum){
+    this.maxNum = maxNum
+    this.count = 0
+    this.taskList = []
+  }
+  add(promiseCreator){
+    if(this.count >= maxNum){
+      await new Promise((resolve) => {
+        this.taskList.push(resolve)
+      })
+    }
+    this.count++
+    let res = await promiseCreator()
+    this.count--
+    if(this.taskList.length){
+      this.taskList.shift()()
+    }
+    return res
+  }
+}
+```

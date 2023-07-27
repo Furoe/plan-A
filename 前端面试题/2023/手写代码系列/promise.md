@@ -108,7 +108,7 @@ myPromise.all = function(arr){
   return new myPromise((resolve, reject) => {
     let result = []
     let i = 0, len = arr.length
-    for(i;i < len;i++){
+    for(;i < len;i++){
       arr[i].then(res => {
         result[i++] = res
         if(i === len) {

@@ -24,6 +24,7 @@ function resolvePromise(promise, value, resolve, reject){
           reject(err)
         })
       }else{
+        called = true
         resolve(value)
       }
     }catch(e){

@@ -2,7 +2,7 @@
 #### Provider
 `react-redux`提供`Provider`使得`redux`的`store`全局可用。
 ```jsx
-import React from 'reac'
+import React from 'react'
 import ReactDom from 'react-dom'
 
 import { Provider } from 'react-redux'
